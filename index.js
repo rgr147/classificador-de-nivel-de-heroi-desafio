@@ -39,7 +39,15 @@ class Heroi {
     }
 }
 
-const meuHeroi = new Heroi("Heroi Dev", 10000);
+//instanciando 2 herois
+const meuHeroi1 = new Heroi("Heroi Dev", 10000);
+const meuHeroi2 = new Heroi("Heroi Javeiro", 4380);
 
-meuHeroi.ganhaXp();
-console.log(meuHeroi.mensagemDeNivel());
+const herois =  [meuHeroi1, meuHeroi2]
+
+meuHeroi1.ganhaXp();
+
+//laço de repetição para verificar a saída do resultado
+for(let i = 0;i < herois.length;i++) {
+    console.log(herois[i].mensagemDeNivel());
+}
